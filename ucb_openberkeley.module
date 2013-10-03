@@ -15,13 +15,16 @@ function ucb_openberkeley_form_alter(&$form, &$form_state, $form_id) {
       if (!isset($form['add_roles']) || (!isset($form['remove_roles']))) {
         break;
       }
+      $admin_rid = variable_get('user_admin_role');
+      $roles = user_roles();
+      $admin_rolename = $roles[$admin_rid];
       while (list($k, $v)  = each($form['add_roles']['#options'])) {
-        if ($v == 'administrator') {
+        if ($v == $admin_rolename) {
           unset($form['add_roles']['#options'][$k]);
         }
       }
       while (list($k, $v)  = each($form['remove_roles']['#options'])) {
-        if ($v == 'administrator') {
+        if ($v == $admin_rolename) {
           unset($form['remove_roles']['#options'][$k]);
         }
       }
