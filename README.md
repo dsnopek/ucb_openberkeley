@@ -4,10 +4,11 @@ ucb_openberkeley-7.x
 Purpose
 =======
 
-General purpose module for Open Berkeley customizations (OB Latest Platform). Including Panopoly WYSIWYG overrides.
+General purpose module for Open Berkeley customizations
 
-Note: For Open Berkeley beta4 sites, use the beta4 branch.
+Branches
+========
 
-Author
-======
-IST Drupal Team
+The drupal.org git strategy is not to use the master branch. Click on
+the github Branches tab to get to the 6.x and 7.x branches. The
+READMEs on the branches are a lot more entertaining.
