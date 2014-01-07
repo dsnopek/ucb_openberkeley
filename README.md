@@ -4,7 +4,9 @@ ucb_openberkeley-7.x
 Purpose
 =======
 
-General purpose module for Open Berkeley customizations
+General purpose module for Open Berkeley customizations (for OB beta4 sites)
+
+Note: For OB sites on the latest platform, use the master branch.
 
 Branches
 ========
