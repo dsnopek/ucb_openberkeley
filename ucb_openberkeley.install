@@ -7,8 +7,6 @@
 
 /**
  * DRUPALOPS-153: Permission changes for admin role prevent.
- * Remove ability to administer users
- * Do not add ability to create CAS users
  */
 function ucb_openberkeley_update_7001() {
   $builder = user_role_load_by_name('builder')->rid;
@@ -22,6 +20,9 @@ function ucb_openberkeley_update_7001() {
   return t('Adjusted builder permissions for admin role prevent.');
 }
 
+/**
+ * DRUPALOPS-153: Remove permission to create CAS users.
+ */
 function ucb_openberkeley_update_7002() {
   $builder = user_role_load_by_name('builder')->rid;
   $permissions = array(
